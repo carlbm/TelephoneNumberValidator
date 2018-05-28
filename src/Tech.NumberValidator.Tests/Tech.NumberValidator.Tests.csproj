@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneralValidation\CountryCallingCodeValidatorTests.cs" />
     <Compile Include="GeneralValidation\CanRecogniseCountry.cs" />
     <Compile Include="GeneralValidation\CanRecogniseInternationalCode.cs" />
     <Compile Include="GeneralValidation\CanRecogniseStd.cs" />

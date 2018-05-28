@@ -6,7 +6,7 @@ using Tech.NumberValidator.CountryCodes.StartingWith4;
 
 namespace Tech.NumberValidator.CountryCodes
 {
-    static class ValidateCountryCode
+    static class CountryCode
     {
         public static CountryCallingCodeResult Validate(string input)
         {

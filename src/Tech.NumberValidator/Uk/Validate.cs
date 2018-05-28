@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Tech.NumberValidator.CountryCodes;
 
 namespace Tech.NumberValidator.Uk
 {
@@ -6,7 +7,6 @@ namespace Tech.NumberValidator.Uk
     {
         private static readonly IList<IValidator> UkNumberValidators = new List<IValidator>
         {
-            new UkCountryCodeValidator(),
             new UkStdValidator(),
             new UkSnValidator(),
         };

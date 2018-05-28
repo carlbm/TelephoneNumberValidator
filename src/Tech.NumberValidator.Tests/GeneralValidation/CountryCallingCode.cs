@@ -8,26 +8,6 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
     public class CountryCallingCode
     {
         [Theory]
-        [InlineData("0447977119232", 44)]
-        [InlineData("447977119232", 44)]
-        [InlineData("+447977119232", 44)]
-        [InlineData("00447977119232", 44)]
-        [InlineData("00441926444555", 44)]
-        [InlineData("003537977119232", 353)]
-        [InlineData("+3537977119232", 353)]
-        [InlineData("03537977119232", 353)]
-        [InlineData("351(0)7977119232", 351)]
-        [InlineData("+3517977119232", 351)]
-        [InlineData("03517977119232", 351)]
-        [InlineData("003517977119232", 351)]
-        public void IsRecognisedWhenItExists(string testNumber, int countryCallingCode)
-        {
-            var result = Validate.Number(testNumber);
-
-            result.CountryCallingCode.Should().Be(countryCallingCode);
-        }
-
-        [Theory]
         [InlineData("01926444555")]
         [InlineData("1926444555")]
         [InlineData("01926351555")]
@@ -72,7 +52,7 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
         {
             var number = testNumber.Replace("-", string.Empty);
             number = number.Substring(0, 4);
-            var result = ValidateCountryCode.Validate(number);
+            var result = CountryCode.Validate(number);
 
             result.CountryIsoCodes.Should().Contain(expectedCountry);
         }
@@ -150,7 +130,7 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
         public void ValidateCountryCodeWorksForEurope(string testNumber, int expectedCountryCallingCode)
         {
             var number = testNumber.Substring(0, 4);
-            var result = ValidateCountryCode.Validate(number);
+            var result = CountryCode.Validate(number);
 
             result.CountryCallingCode.Should().Be(expectedCountryCallingCode);
         }

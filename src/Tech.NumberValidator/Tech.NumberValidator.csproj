@@ -51,7 +51,7 @@
     <Compile Include="CountryCodes\StartingWith3\CountryCodeStarting35.cs" />
     <Compile Include="CountryCodes\StartingWith4\CountryCodeStarting42.cs" />
     <Compile Include="CountryCodes\StartingWith4\CountryCodeStarting4.cs" />
-    <Compile Include="CountryCodes\ValidateCountryCode.cs" />
+    <Compile Include="CountryCodes\CountryCode.cs" />
     <Compile Include="Initialisation\NumberCleanerContainer.cs" />
     <Compile Include="IValidator.cs" />
     <Compile Include="NumberCleaners\DetectMismatchedPlus.cs" />
@@ -59,7 +59,7 @@
     <Compile Include="TelephoneNumber.cs" />
     <Compile Include="Uk\Clean.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Uk\UkCountryCodeValidator.cs" />
+    <Compile Include="CountryCodes\CountryCallingCodeValidator.cs" />
     <Compile Include="Uk\UkSnValidator.cs" />
     <Compile Include="Uk\UkStdValidator.cs" />
     <Compile Include="Uk\Validate.cs" />

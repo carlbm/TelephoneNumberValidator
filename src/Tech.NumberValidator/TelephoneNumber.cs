@@ -1,4 +1,6 @@
-﻿namespace Tech.NumberValidator
+﻿using System;
+
+namespace Tech.NumberValidator
 {
     public class TelephoneNumber
     {
@@ -14,16 +16,22 @@
             CountryCallingCodePresent = number.CountryCallingCodePresent;
             ValidNumber = number.ValidNumber;
             Confident = number.Confident;
+            Length = number.Length;
         }
 
         public TelephoneNumber(string number)
         {
             OriginalNumber = number;
-            CleanedNumber = number;
+            CleanedNumber = number.Replace(" ", string.Empty);
+            if (CleanedNumber.IndexOf("(0)", StringComparison.OrdinalIgnoreCase) > 0)
+            {
+                CleanedNumber = CleanedNumber.Replace("(0)", string.Empty);
+            }
         }
 
         public string OriginalNumber { get; set; }
         public string CleanedNumber { get; set; }
+        public int Length { get; set; }
 
         public int InternationalDialingPrefix { get; set; }
         public int CountryCallingCode { get; set; }
@@ -34,5 +42,6 @@
         public bool CountryCallingCodePresent { get; set; }
         public bool ValidNumber { get; set; }
         public bool Confident { get; set; }
+        public string NationalPhoneNumber { get; set; }
     }
 }

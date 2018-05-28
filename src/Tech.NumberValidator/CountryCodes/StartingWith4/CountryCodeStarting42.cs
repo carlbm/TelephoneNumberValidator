@@ -1,16 +1,18 @@
-﻿namespace Tech.NumberValidator.CountryCodes.StartingWith4
+﻿using System.Linq;
+
+namespace Tech.NumberValidator.CountryCodes.StartingWith4
 {
     static class CountryCodeStarting42
     {
         public static CountryCallingCodeResult Validate(string code)
         {
-            switch (code)
+            switch (code.First())
             {
-                case "0":
+                case '0':
                     return new CountryCallingCodeResult(420, "CZ");
-                case "1":
+                case '1':
                     return new CountryCallingCodeResult(421, "SK");
-                case "3":
+                case '3':
                     return new CountryCallingCodeResult(423, "LI");
             }
             return new CountryCallingCodeResult();

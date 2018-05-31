@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountryCodes\CountryCallingCodeResult.cs" />
+    <Compile Include="CountryCodes\StartingWith1\Nanp.cs" />
     <Compile Include="CountryCodes\StartingWith1\CountryCodeStarting1.cs" />
     <Compile Include="CountryCodes\StartingWith3\CountryCodeStarting3.cs" />
     <Compile Include="CountryCodes\StartingWith3\CountryCodeStarting38.cs" />

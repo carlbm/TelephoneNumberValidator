@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Tech.NumberValidator.CountryCodes
 {
@@ -15,10 +16,33 @@ namespace Tech.NumberValidator.CountryCodes
         {
             Valid = false;
             CountryIsoCodes = new List<string>();
+            RequiredNumberOfDigits = Enumerable.Range(1, 12).ToList();
         }
 
-        public List<string> CountryIsoCodes { get; set; }
-        public int CountryCallingCode { get; set; }
-        public bool Valid { get; set; }        
+        public CountryCallingCodeResult(int countryCallingCode, string isoCountryCode, 
+            string state, params int[] requiredNumberOfDigits)
+        {
+            CountryCallingCode = countryCallingCode;
+            CountryIsoCodes = new List<string> {isoCountryCode};
+            RequiredNumberOfDigits = requiredNumberOfDigits.ToList();
+            State = state;
+            Nanp = true;
+        }
+
+        public CountryCallingCodeResult(int countryCallingCode, string isoCountryCode, 
+            bool nanp, params int[] requiredNumberOfDigits)
+        {
+            CountryCallingCode = countryCallingCode;
+            CountryIsoCodes = new List<string> { isoCountryCode };
+            RequiredNumberOfDigits = requiredNumberOfDigits.ToList();
+            Nanp = true;
+        }
+
+        public List<string> CountryIsoCodes { get; }
+        public int CountryCallingCode { get; }
+        public bool Valid { get; }
+        public List<int> RequiredNumberOfDigits { get; } = new List<int>();
+        public string State { get; }
+        public bool Nanp { get; }
     }
 }

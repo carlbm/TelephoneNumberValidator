@@ -3,6 +3,7 @@ using System.Linq;
 using Tech.NumberValidator.CountryCodes.StartingWith1;
 using Tech.NumberValidator.CountryCodes.StartingWith3;
 using Tech.NumberValidator.CountryCodes.StartingWith4;
+using Tech.NumberValidator.CountryCodes.StartingWith9;
 
 namespace Tech.NumberValidator.CountryCodes
 {
@@ -10,10 +11,6 @@ namespace Tech.NumberValidator.CountryCodes
     {
         public static CountryCallingCodeResult Validate(string input)
         {
-            if (input.StartsWith("0"))
-            {
-                throw new ArgumentException("Country Calling Code cannot start with a 0");
-            }
             if (input.Length > 4)
             {
                 throw new ArgumentException("Country Calling Code maximum length is 4");
@@ -21,6 +18,8 @@ namespace Tech.NumberValidator.CountryCodes
 
             switch (input.First())
             {
+                case '0':
+                    throw new ArgumentException("Country Calling Code cannot start with a 0");
                 case '1':
                     return CountryCodeStarting1.Validate(input.Substring(1));
                 case '2':
@@ -38,7 +37,7 @@ namespace Tech.NumberValidator.CountryCodes
                 case '8':
                     return CountryCodeStarting1.Validate(input.Substring(1));
                 case '9':
-                    return CountryCodeStarting1.Validate(input.Substring(1));
+                    return CountryCodeStarting9.Validate(input.Substring(1));
             }
 
             return new CountryCallingCodeResult();

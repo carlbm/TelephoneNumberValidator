@@ -53,6 +53,10 @@
     <Compile Include="CountryCodes\StartingWith4\CountryCodeStarting42.cs" />
     <Compile Include="CountryCodes\StartingWith4\CountryCodeStarting4.cs" />
     <Compile Include="CountryCodes\CountryCode.cs" />
+    <Compile Include="CountryCodes\StartingWith9\CountryCodeStarting9.cs" />
+    <Compile Include="CountryCodes\StartingWith9\CountryCodeStarting97.cs" />
+    <Compile Include="CountryCodes\StartingWith9\CountryCodeStarting99.cs" />
+    <Compile Include="CountryCodes\StartingWith9\CountryCodeStarting96.cs" />
     <Compile Include="Initialisation\NumberCleanerContainer.cs" />
     <Compile Include="IValidator.cs" />
     <Compile Include="NumberCleaners\DetectMismatchedPlus.cs" />

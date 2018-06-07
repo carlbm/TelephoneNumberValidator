@@ -134,5 +134,47 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
 
             result.CountryCallingCode.Should().Be(expectedCountryCallingCode);
         }
+
+        // 9x numbers
+        [Theory]
+        [InlineData("902465789", 90)]
+        [InlineData("912465789", 91)]
+        [InlineData("922465789", 92)]
+        [InlineData("932465789", 93)]
+        [InlineData("942465789", 94)]
+        [InlineData("9502465789", 95)]
+        [InlineData("9602465789", 960)]
+        [InlineData("9612465789", 961)]
+        [InlineData("9622465789", 962)]
+        [InlineData("9632465789", 963)]
+        [InlineData("9642465789", 964)]
+        [InlineData("9652465789", 965)]
+        [InlineData("9662465789", 966)]
+        [InlineData("9672465789", 967)]
+        [InlineData("9682465789", 968)]
+        [InlineData("9702465789", 970)]
+        [InlineData("9712465789", 971)]
+        [InlineData("972465789", 972)]
+        [InlineData("9732465789", 973)]
+        [InlineData("9742465789", 974)]
+        [InlineData("9752465789", 975)]
+        [InlineData("9762465789", 976)]
+        [InlineData("9772465789", 977)]
+        [InlineData("9792465789", 979)]
+        [InlineData("982465789", 98)]
+        [InlineData("9912465789", 991)]
+        [InlineData("9922465789", 992)]
+        [InlineData("9932465789", 993)]
+        [InlineData("9942465789", 994)]
+        [InlineData("9952465789", 995)]
+        [InlineData("9962465789", 996)]
+        [InlineData("9982465789", 998)]
+        public void ValidateCountryCodeWorksForAsia(string testNumber, int expectedCountryCallingCode)
+        {
+            var number = testNumber.Substring(0, 4);
+            var result = CountryCode.Validate(number);
+
+            result.CountryCallingCode.Should().Be(expectedCountryCallingCode);
+        }
     }
 }

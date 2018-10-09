@@ -11,10 +11,9 @@ namespace Tech.NumberValidator.Uk
             new UkSnValidator(),
         };
 
-        public static TelephoneNumber Number(string input)
+        public static TelephoneNumber Number(TelephoneNumber input)
         {
-            var currentNumber = new TelephoneNumber(input);
-
+            var currentNumber = input;
             foreach (var ukNumberValidator in UkNumberValidators)
             {
                 currentNumber = ukNumberValidator.Validate(currentNumber);

@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Tech.NumberValidator.CountryCodes;
-using Tech.NumberValidator.Uk;
 using Xunit;
 
 namespace Tech.NumberValidator.Tests.GeneralValidation
@@ -59,78 +58,77 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
 
         [Theory]
         // 3x numbers
-        [InlineData("307977119232", 30)]
+        [InlineData("307897123654", 30)]
 
-        [InlineData("317977119232", 31)]
+        [InlineData("317897123654", 31)]
 
-        [InlineData("327977119232", 32)]
+        [InlineData("327897123654", 32)]
 
-        [InlineData("337977119232", 33)]
+        [InlineData("337897123654", 33)]
 
-        [InlineData("347977119232", 34)]
+        [InlineData("347897123654", 34)]
 
-        [InlineData("3507977119232", 350)]
-        [InlineData("3517977119232", 351)]
-        [InlineData("3527977119232", 352)]
-        [InlineData("3537977119232", 353)]
-        [InlineData("3547977119232", 354)]
-        [InlineData("3557977119232", 355)]
-        [InlineData("3567977119232", 356)]
-        [InlineData("3577977119232", 357)]
-        [InlineData("3587977119232", 358)]
-        [InlineData("3597977119232", 359)]
+        [InlineData("3507897123654", 350)]
+        [InlineData("3517897123654", 351)]
+        [InlineData("3527897123654", 352)]
+        [InlineData("3537897123654", 353)]
+        [InlineData("3547897123654", 354)]
+        [InlineData("3557897123654", 355)]
+        [InlineData("3567897123654", 356)]
+        [InlineData("3577897123654", 357)]
+        [InlineData("3587897123654", 358)]
+        [InlineData("3597897123654", 359)]
 
-        [InlineData("367977119232", 36)]
+        [InlineData("367897123654", 36)]
 
-        [InlineData("3707977119232", 370)]
-        [InlineData("3717977119232", 371)]
-        [InlineData("3727977119232", 372)]
-        [InlineData("3737977119232", 373)]
-        [InlineData("3747977119232", 374)]
-        [InlineData("3757977119232", 375)]
-        [InlineData("3767977119232", 376)]
-        [InlineData("3777977119232", 377)]
-        [InlineData("3787977119232", 378)]
-        [InlineData("3797977119232", 379)]
+        [InlineData("3707897123654", 370)]
+        [InlineData("3717897123654", 371)]
+        [InlineData("3727897123654", 372)]
+        [InlineData("3737897123654", 373)]
+        [InlineData("3747897123654", 374)]
+        [InlineData("3757897123654", 375)]
+        [InlineData("3767897123654", 376)]
+        [InlineData("3777897123654", 377)]
+        [InlineData("3787897123654", 378)]
+        [InlineData("3797897123654", 379)]
 
-        [InlineData("3807977119232", 380)]
-        [InlineData("3817977119232", 381)]
-        [InlineData("3827977119232", 382)]
-        [InlineData("3837977119232", 383)]
-        [InlineData("3857977119232", 385)]
-        [InlineData("3867977119232", 386)]
-        [InlineData("3877977119232", 387)]
-        [InlineData("3887977119232", 388)]
-        [InlineData("3897977119232", 389)]
+        [InlineData("3807897123654", 380)]
+        [InlineData("3817897123654", 381)]
+        [InlineData("3827897123654", 382)]
+        [InlineData("3837897123654", 383)]
+        [InlineData("3857897123654", 385)]
+        [InlineData("3867897123654", 386)]
+        [InlineData("3877897123654", 387)]
+        [InlineData("3887897123654", 388)]
+        [InlineData("3897897123654", 389)]
 
-        [InlineData("397977119232", 39)]
+        [InlineData("397897123654", 39)]
 
         // 4x numbers
-        [InlineData("407977119232", 40)]
-        [InlineData("417977119232", 41)]
+        [InlineData("407897123654", 40)]
+        [InlineData("417897123654", 41)]
 
-        [InlineData("4207977119232", 420)]
-        [InlineData("4217977119232", 421)]
-        [InlineData("4237977119232", 423)]
+        [InlineData("4207897123654", 420)]
+        [InlineData("4217897123654", 421)]
+        [InlineData("4237897123654", 423)]
 
-        [InlineData("437977119232", 43)]
+        [InlineData("437897123654", 43)]
 
-        [InlineData("447977119232", 44)]
+        [InlineData("447897123654", 44)]
 
-        [InlineData("457977119232", 45)]
+        [InlineData("457897123654", 45)]
 
-        [InlineData("467977119232", 46)]
+        [InlineData("467897123654", 46)]
 
-        [InlineData("477977119232", 47)]
+        [InlineData("477897123654", 47)]
 
-        [InlineData("487977119232", 48)]
+        [InlineData("487897123654", 48)]
 
-        [InlineData("497977119232", 49)]
+        [InlineData("497897123654", 49)]
 
         public void ValidateCountryCodeWorksForEurope(string testNumber, int expectedCountryCallingCode)
         {
-            var number = testNumber.Substring(0, 4);
-            var result = CountryCode.Validate(number);
+            var result = CountryCode.Validate(testNumber);
 
             result.CountryCallingCode.Should().Be(expectedCountryCallingCode);
         }

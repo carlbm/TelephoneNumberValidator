@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech.NumberValidator", "Tec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech.NumberValidator.Tests", "Tech.NumberValidator.Tests\Tech.NumberValidator.Tests.csproj", "{3FB1751D-C231-4A18-93C0-98B5243F2CD2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{FFC1DB9B-EF1E-40A4-8955-2CFB43AD5CDC}"
+	ProjectSection(SolutionItems) = preProject
+		Tech.NumberValidator\Tech.NumberValidator.nuspec = Tech.NumberValidator\Tech.NumberValidator.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

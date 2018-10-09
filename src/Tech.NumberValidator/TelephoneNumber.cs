@@ -43,5 +43,6 @@ namespace Tech.NumberValidator
         public bool ValidNumber { get; set; }
         public bool Confident { get; set; }
         public string NationalPhoneNumber { get; set; }
+        public bool ProbablyNotAnIndividual { get; set; }
     }
 }

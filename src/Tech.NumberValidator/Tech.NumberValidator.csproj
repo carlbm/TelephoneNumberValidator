@@ -68,6 +68,7 @@
     <Compile Include="Uk\UkSnValidator.cs" />
     <Compile Include="Uk\UkStdValidator.cs" />
     <Compile Include="Uk\Validate.cs" />
+    <Compile Include="ValidateNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

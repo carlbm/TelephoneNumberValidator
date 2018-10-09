@@ -13,7 +13,7 @@ namespace Tech.NumberValidator.CountryCodes
         {
             if (input.Length > 4)
             {
-                throw new ArgumentException("Country Calling Code maximum length is 4");
+                input = input.Substring(0, 4);
             }
 
             switch (input.First())

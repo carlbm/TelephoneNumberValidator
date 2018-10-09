@@ -7,22 +7,22 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
     public class CountryCallingCodeValidatorTests
     {
         [Theory]
-        [InlineData("0447977119232", 44)]
-        [InlineData("447977119232", 44)]
-        [InlineData("+447977119232", 44)]
-        [InlineData("00447977119232", 44)]
+        [InlineData("0447897123654", 44)]
+        [InlineData("447897123654", 44)]
+        [InlineData("+447897123654", 44)]
+        [InlineData("00447897123654", 44)]
         [InlineData("00441926444555", 44)]
-        [InlineData("003537977119232", 353)]
-        [InlineData("+3537977119232", 353)]
-        [InlineData("03537977119232", 353)]
-        [InlineData("351(0)7977119232", 351)]
-        [InlineData("+3517977119232", 351)]
-        [InlineData("03517977119232", 351)]
-        [InlineData("003517977119232", 351)]
+        [InlineData("003537897123654", 353)]
+        [InlineData("+3537897123654", 353)]
+        [InlineData("03537897123654", 353)]
+        [InlineData("351(0)7897123654", 351)]
+        [InlineData("+3517897123654", 351)]
+        [InlineData("03517897123654", 351)]
+        [InlineData("003517897123654", 351)]
         
         [InlineData("441234365569", 44)]
-        [InlineData("0+447977119232", 44)]
-        [InlineData("00+447977119232", 44)]
+        [InlineData("0+447897123654", 44)]
+        [InlineData("00+447897123654", 44)]
 
         public void ShouldRecogniseCountryCode(string testNumber, int expectedCountryCallingCode)
         {
@@ -33,22 +33,22 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
         }
 
         [Theory]
-        [InlineData("0447977119232", "7977119232")]
-        [InlineData("447977119232", "7977119232")]
-        [InlineData("+447977119232", "7977119232")]
-        [InlineData("00447977119232", "7977119232")]
+        [InlineData("0447897123654", "7897123654")]
+        [InlineData("447897123654", "7897123654")]
+        [InlineData("+447897123654", "7897123654")]
+        [InlineData("00447897123654", "7897123654")]
         [InlineData("00441926444555", "1926444555")]
-        [InlineData("003537977119232", "7977119232")]
-        [InlineData("+3537977119232", "7977119232")]
-        [InlineData("03537977119232", "7977119232")]
-        [InlineData("351(0)7977119232", "7977119232")]
-        [InlineData("+3517977119232", "7977119232")]
-        [InlineData("03517977119232", "7977119232")]
-        [InlineData("003517977119232", "7977119232")]
+        [InlineData("003537897123654", "7897123654")]
+        [InlineData("+3537897123654", "7897123654")]
+        [InlineData("03537897123654", "7897123654")]
+        [InlineData("351(0)7897123654", "7897123654")]
+        [InlineData("+3517897123654", "7897123654")]
+        [InlineData("03517897123654", "7897123654")]
+        [InlineData("003517897123654", "7897123654")]
 
         [InlineData("441234365569", "1234365569")]
-        [InlineData("0+447977119232", "7977119232")]
-        [InlineData("00+447977119232", "7977119232")]
+        [InlineData("0+447897123654", "7897123654")]
+        [InlineData("00+447897123654", "7897123654")]
         public void ShouldCalculateNationalNumber(string testNumber, string expectedNationalNumber)
         {
             var number = new TelephoneNumber(testNumber);

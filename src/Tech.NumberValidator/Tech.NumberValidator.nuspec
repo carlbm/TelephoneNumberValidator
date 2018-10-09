@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$Id$</id>
+    <version>0.0.1-alpha</version>
+    <authors>Carl Berisford-Murray</authors>
+    <owners>Carl Berisford-Murray</owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/carlbm/TelephoneNumberValidator</projectUrl>
+    <iconUrl>https://github.com/carlbm/TelephoneNumberValidator/blob/master/logo.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Telephone number validation and classification</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2018 Carl Berisford-Murray</copyright>
+    <tags></tags>
+    <dependencies>
+      <dependency id="DryIoc" version="2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\Tech.NumberValidator.dll" target="lib\net4.5.2\Tech.NumberValidator.dll" />
+  </files>
+</package>

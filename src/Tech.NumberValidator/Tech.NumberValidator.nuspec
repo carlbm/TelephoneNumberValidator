@@ -18,6 +18,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\$configuration$\Tech.NumberValidator.dll" target="lib\net4.5.2\Tech.NumberValidator.dll" />
+    <file src="bin\Release\Tech.NumberValidator.dll" target="lib\net4.5.2\Tech.NumberValidator.dll" />
   </files>
 </package>

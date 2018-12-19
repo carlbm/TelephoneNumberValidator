@@ -15,12 +15,16 @@ namespace Tech.NumberValidator.CountryCodes
                 var countryCodeResult = CountryCode.Validate(match.Groups[2].Value);
                 if (countryCodeResult.Valid)
                 {
-                    input.CountryCallingCode = countryCodeResult.CountryCallingCode;
-                    input.CountryCallingCodePresent = true;
-                    var index = input.CleanedNumber.IndexOf(input.CountryCallingCode.ToString(), StringComparison.OrdinalIgnoreCase) +
-                                input.CountryCallingCode.ToString().Length;
+                    var index = input.CleanedNumber.IndexOf(countryCodeResult.CountryCallingCode.ToString(), StringComparison.OrdinalIgnoreCase) +
+                                countryCodeResult.CountryCallingCode.ToString().Length;
                         
                     input.NationalPhoneNumber = input.CleanedNumber.Substring(index);
+
+                    if (countryCodeResult.Validate(input.NationalPhoneNumber))
+                    {
+                        input.CountryCallingCode = countryCodeResult.CountryCallingCode;
+                        input.CountryCallingCodePresent = true;
+                    }
                 }
             }
 

@@ -24,6 +24,8 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
         [InlineData("0+447897123654", 44)]
         [InlineData("00+447897123654", 44)]
 
+        [InlineData("020245674567", 20)]
+
         public void ShouldRecogniseCountryCode(string testNumber, int expectedCountryCallingCode)
         {
             var number = new TelephoneNumber(testNumber);

@@ -9,6 +9,7 @@ namespace Tech.NumberValidator.CountryCodes
         {
             CountryCallingCode = countryCode;
             CountryIsoCodes = new List<string>(isoCountryCodes);
+            RequiredNumberOfDigits = Enumerable.Range(1, 12).ToList();
             Valid = true;
         }
 
@@ -36,6 +37,7 @@ namespace Tech.NumberValidator.CountryCodes
             CountryIsoCodes = new List<string> { isoCountryCode };
             RequiredNumberOfDigits = requiredNumberOfDigits.ToList();
             Nanp = true;
+            Valid = true;
         }
 
         public List<string> CountryIsoCodes { get; }
@@ -44,5 +46,15 @@ namespace Tech.NumberValidator.CountryCodes
         public List<int> RequiredNumberOfDigits { get; } = new List<int>();
         public string State { get; }
         public bool Nanp { get; }
+
+        public bool Validate(string nationalPhoneNumber)
+        {
+            if (RequiredNumberOfDigits.Contains(nationalPhoneNumber.Length))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

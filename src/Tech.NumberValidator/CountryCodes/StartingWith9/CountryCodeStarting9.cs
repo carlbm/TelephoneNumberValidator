@@ -6,7 +6,7 @@ namespace Tech.NumberValidator.CountryCodes.StartingWith9
     {
         public static CountryCallingCodeResult Validate(string localNumber)
         {
-            switch (localNumber.First())
+            switch (localNumber.FirstOrDefault())
             {
                 case '0':
                     return new CountryCallingCodeResult(90, "TR", "CT");

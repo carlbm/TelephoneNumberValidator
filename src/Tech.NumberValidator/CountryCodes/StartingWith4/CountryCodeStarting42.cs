@@ -6,7 +6,7 @@ namespace Tech.NumberValidator.CountryCodes.StartingWith4
     {
         public static CountryCallingCodeResult Validate(string code)
         {
-            switch (code.First())
+            switch (code.FirstOrDefault())
             {
                 case '0':
                     return new CountryCallingCodeResult(420, "CZ");

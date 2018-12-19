@@ -73,6 +73,16 @@ namespace Tech.NumberValidator.Tests.GeneralValidation
         [InlineData("11111111111")]
         [InlineData("111111111111")]
         [InlineData("1111111111111")]
+        [InlineData("968842703")]
+        [InlineData("971337851")]
+        [InlineData("968495110")]
+        [InlineData("973505330")]
+        [InlineData("964008242")]
+        [InlineData("972860084")]
+        [InlineData("375506834")]
+        [InlineData("376232868")]
+        [InlineData("421215605")]
+        [InlineData("977002245")]
         public void ShouldNotRecogniseCountryCallingCodeWhenItDoesNotExist(string testNumber)
         {
             var number = new TelephoneNumber(testNumber);

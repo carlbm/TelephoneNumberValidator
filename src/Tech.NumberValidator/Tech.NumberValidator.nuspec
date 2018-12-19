@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>$Id$</id>
-    <version>0.0.1-alpha</version>
+    <version>0.0.2-alpha</version>
     <authors>Carl Berisford-Murray</authors>
     <owners>Carl Berisford-Murray</owners>
     <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
@@ -14,7 +14,6 @@
     <copyright>Copyright 2018 Carl Berisford-Murray</copyright>
     <tags></tags>
     <dependencies>
-      <dependency id="DryIoc" version="2.0" />
     </dependencies>
   </metadata>
   <files>

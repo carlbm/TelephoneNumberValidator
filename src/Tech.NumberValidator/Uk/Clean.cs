@@ -1,4 +1,4 @@
-﻿using Tech.NumberValidator.Initialisation;
+﻿using System.Collections.Generic;
 using Tech.NumberValidator.NumberCleaners;
 
 namespace Tech.NumberValidator.Uk
@@ -7,7 +7,11 @@ namespace Tech.NumberValidator.Uk
     {
         public static string Number(string numberToClean)
         {
-            var numberCleaners = NumberCleanerContainer.ResolveAll<INumberCleaner>();
+            var numberCleaners = new List<INumberCleaner>
+            {
+                new DetectMismatchedPlus(),
+            };
+
             var currentNumber = new TelephoneNumber(numberToClean);
 
             foreach (var numberCleaner in numberCleaners)

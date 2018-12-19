@@ -6,7 +6,7 @@ namespace Tech.NumberValidator.CountryCodes.StartingWith9
     {
         public static CountryCallingCodeResult Validate(string code)
         {
-            switch (code.First())
+            switch (code.FirstOrDefault())
             {
                 case '1':
                     return new CountryCallingCodeResult(991, "XC");

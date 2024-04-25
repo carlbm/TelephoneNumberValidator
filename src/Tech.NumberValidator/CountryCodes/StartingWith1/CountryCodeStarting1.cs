@@ -1,11 +1,10 @@
 ﻿
-namespace Tech.NumberValidator.CountryCodes.StartingWith1
+namespace Tech.NumberValidator.CountryCodes.StartingWith1;
+
+static class CountryCodeStarting1
 {
-    static class CountryCodeStarting1
+    public static CountryCallingCodeResult Validate(string localNumber)
     {
-        public static CountryCallingCodeResult Validate(string localNumber)
-        {
-            return Nanp.Validate(localNumber);
-        }
+        return Nanp.Validate(localNumber);
     }
 }

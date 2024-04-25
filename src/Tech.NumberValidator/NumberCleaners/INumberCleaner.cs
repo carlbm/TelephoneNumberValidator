@@ -1,7 +1,6 @@
-﻿namespace Tech.NumberValidator.NumberCleaners
+﻿namespace Tech.NumberValidator.NumberCleaners;
+
+interface INumberCleaner
 {
-    interface INumberCleaner
-    {
-        TelephoneNumber TestAndClean(TelephoneNumber number);
-    }
+    string TestAndClean(string number);
 }

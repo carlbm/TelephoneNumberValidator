@@ -1,21 +1,20 @@
 ﻿using System.Linq;
 
-namespace Tech.NumberValidator.CountryCodes.StartingWith4
+namespace Tech.NumberValidator.CountryCodes.StartingWith4;
+
+static class CountryCodeStarting42
 {
-    static class CountryCodeStarting42
+    public static CountryCallingCodeResult Validate(string code)
     {
-        public static CountryCallingCodeResult Validate(string code)
+        switch (code.FirstOrDefault())
         {
-            switch (code.FirstOrDefault())
-            {
-                case '0':
-                    return new CountryCallingCodeResult(420, "CZ");
-                case '1':
-                    return new CountryCallingCodeResult(421, "SK");
-                case '3':
-                    return new CountryCallingCodeResult(423, "LI");
-            }
-            return new CountryCallingCodeResult();
+            case '0':
+                return new CountryCallingCodeResult(420, "CZ");
+            case '1':
+                return new CountryCallingCodeResult(421, "SK");
+            case '3':
+                return new CountryCallingCodeResult(423, "LI");
         }
+        return new CountryCallingCodeResult();
     }
 }

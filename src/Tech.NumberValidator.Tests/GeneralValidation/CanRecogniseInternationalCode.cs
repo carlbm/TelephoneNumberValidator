@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tech.NumberValidator.Tests.GeneralValidation
+namespace Tech.NumberValidator.Tests.GeneralValidation;
+
+class CanRecogniseInternationalCode
 {
-    class CanRecogniseInternationalCode
-    {
-    }
 }

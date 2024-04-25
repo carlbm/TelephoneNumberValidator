@@ -1,19 +1,18 @@
 ﻿using System.Linq;
 
-namespace Tech.NumberValidator.CountryCodes.StartingWith8
+namespace Tech.NumberValidator.CountryCodes.StartingWith8;
+
+static class CountryCodeStarting87
 {
-    static class CountryCodeStarting87
+    public static CountryCallingCodeResult Validate(string code)
     {
-        public static CountryCallingCodeResult Validate(string code)
+        switch (code.FirstOrDefault())
         {
-            switch (code.FirstOrDefault())
-            {
-                case '0':
-                    return new CountryCallingCodeResult(870, "XN");
-                case '8':
-                    return new CountryCallingCodeResult(878, "XP");
-            }
-            return new CountryCallingCodeResult();
+            case '0':
+                return new CountryCallingCodeResult(870, "XN");
+            case '8':
+                return new CountryCallingCodeResult(878, "XP");
         }
+        return new CountryCallingCodeResult();
     }
 }

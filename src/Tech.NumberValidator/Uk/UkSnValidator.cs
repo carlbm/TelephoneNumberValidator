@@ -1,10 +1,9 @@
-﻿namespace Tech.NumberValidator.Uk
+﻿namespace Tech.NumberValidator.Uk;
+
+class UkSnValidator : IValidator
 {
-    class UkSnValidator : IValidator
+    public TelephoneNumber Validate(TelephoneNumber input)
     {
-        public TelephoneNumber Validate(TelephoneNumber input)
-        {
-            return input;
-        }
+        return input;
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace Tech.NumberValidator
+﻿namespace Tech.NumberValidator;
+
+interface IValidator
 {
-    interface IValidator
-    {
-        TelephoneNumber Validate(TelephoneNumber input);
-    }
+    TelephoneNumber Validate(TelephoneNumber input);
 }

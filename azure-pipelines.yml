@@ -42,13 +42,26 @@ steps:
   inputs:
     command: 'test'
     projects: |
-      **/*UnitTests.dll
+      **/*Tests.dll
       !**/*TestAdapter.dll
       !**/*UiTests.dll
       !**/obj\**
       !**/ref\**
     arguments: '--collect "Code coverage"'
     configuration: '$(buildConfiguration)'
+
+
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/Tech.NumberValidator.csproj'
+    versioningScheme: 'off'
+    includeReferencedProjects: true
+    includeSymbols: true
+    buildProperties: 'configuration=release'
+
+
 
 - task: NuGetCommand@2
   inputs:

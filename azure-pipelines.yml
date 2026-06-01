@@ -59,7 +59,6 @@ steps:
     versioningScheme: 'off'
     includeReferencedProjects: true
     includeSymbols: true
-    buildProperties: 'configuration=release'
 
 
 

@@ -1,0 +1,59 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+ branches:
+  include:
+    - master
+
+pool:
+  vmImage: windows-latest
+
+variables:
+  solution: 'src/**/*.slnx'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  dotnetVersion: 'net9.0'
+
+steps:
+
+# Issue with MSBuild faulty bytes
+- task: UseDotNet@2
+  displayName: 'Installing Dotnet 9 SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '9.0.306'
+
+
+
+- task: DotNetCoreCLI@2
+  displayName: Build solution
+  inputs:
+    azureSubscription: 'Techcellence Website Hosting(3fed158c-1da3-4b48-942d-4b372de5efe3)'
+    command: 'build'
+    projects: '**/*.slnx'
+    arguments: '-c $(buildConfiguration)'
+
+
+
+- task: DotNetCoreCLI@2
+  displayName: Run unit tests
+  inputs:
+    command: 'test'
+    projects: |
+      **/*UnitTests.dll
+      !**/*TestAdapter.dll
+      !**/*UiTests.dll
+      !**/obj\**
+      !**/ref\**
+    arguments: '--collect "Code coverage"'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '33312d7f-ae99-4c36-ba06-9c6bca94148e'

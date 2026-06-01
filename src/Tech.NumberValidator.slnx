@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Nuget/">
+    <File Path="Tech.NumberValidator/Tech.NumberValidator.nuspec" />
+  </Folder>
+  <Project Path="Tech.NumberValidator.Tests/Tech.NumberValidator.Tests.csproj" />
+  <Project Path="Tech.NumberValidator/Tech.NumberValidator.csproj" />
+</Solution>

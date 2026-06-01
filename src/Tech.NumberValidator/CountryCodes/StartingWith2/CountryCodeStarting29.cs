@@ -9,11 +9,11 @@ static class CountryCodeStarting29
         switch (code.FirstOrDefault())
         {
             case '0':
-                return new CountryCallingCodeResult(290, "SH", "TA");
+                return new CountryCallingCodeResult(290, ["SH", "TA"]);
             case '1':
                 return new CountryCallingCodeResult(291, "ER");
             case '7':
-                return new CountryCallingCodeResult(297, "AW");
+                return new CountryCallingCodeResult(297, "AW", false, 7);
             case '8':
                 return new CountryCallingCodeResult(298, "FO");
             case '9':

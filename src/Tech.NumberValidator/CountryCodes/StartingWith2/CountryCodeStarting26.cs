@@ -13,7 +13,7 @@ static class CountryCodeStarting26
             case '1':
                 return new CountryCallingCodeResult(261, "MG");
             case '2':
-                return new CountryCallingCodeResult(262, "RE", "YT", "TF");
+                return new CountryCallingCodeResult(262, ["RE", "YT", "TF"]);
             case '3':
                 return new CountryCallingCodeResult(263, "ZW");
             case '4':

@@ -9,7 +9,7 @@ static class CountryCodeStarting9
         switch (localNumber.FirstOrDefault())
         {
             case '0':
-                return new CountryCallingCodeResult(90, "TR", "CT");
+                return new CountryCallingCodeResult(90, ["TR", "CT"]);
             case '1':
                 return new CountryCallingCodeResult(91, "IN");
             case '2':

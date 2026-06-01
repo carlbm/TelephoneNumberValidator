@@ -17,7 +17,7 @@ static class CountryCodeStarting37
             case '3':
                 return new CountryCallingCodeResult(373, "MD");
             case '4':
-                return new CountryCallingCodeResult(374, "AM", "QN");
+                return new CountryCallingCodeResult(374, ["AM", "QN"]);
             case '5':
                 return new CountryCallingCodeResult(375, "BY");
             case '6':

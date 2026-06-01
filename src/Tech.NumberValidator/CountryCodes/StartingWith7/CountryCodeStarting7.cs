@@ -8,18 +8,20 @@ static class CountryCodeStarting7
     {
         switch (localNumber.First())
         {
+            case '0':
+                return new CountryCallingCodeResult(7, "KZ", false, 10);
             case '3':
-                return new CountryCallingCodeResult(73, "RU");
+                return new CountryCallingCodeResult(7, "RU", false, 10);
             case '4':
-                return new CountryCallingCodeResult(74, "RU");
+                return new CountryCallingCodeResult(7, "RU", false, 10);
             case '6':
-                return new CountryCallingCodeResult(76, "KZ");
+                return new CountryCallingCodeResult(7, "KZ", false, 10);
             case '7':
-                return new CountryCallingCodeResult(77, "KZ");
+                return new CountryCallingCodeResult(7, "KZ", false, 10);
             case '8':
-                return new CountryCallingCodeResult(78, "RU");
+                return new CountryCallingCodeResult(7, "RU", false, 10);
             case '9':
-                return new CountryCallingCodeResult(79, "RU");
+                return new CountryCallingCodeResult(7, "RU", false, 10);
         }
 
         return new CountryCallingCodeResult();

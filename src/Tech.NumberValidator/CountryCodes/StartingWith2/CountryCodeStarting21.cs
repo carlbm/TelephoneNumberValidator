@@ -11,7 +11,7 @@ static class CountryCodeStarting21
             case '1':
                 return new CountryCallingCodeResult(211, "SS");
             case '2':
-                return new CountryCallingCodeResult(212, "MA", "EH");
+                return new CountryCallingCodeResult(212, ["MA", "EH"]);
             case '3':
                 return new CountryCallingCodeResult(213, "DZ");
             case '6':

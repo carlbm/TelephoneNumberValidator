@@ -11,23 +11,23 @@ static class CountryCodeStarting4
             case '0':
                 return new CountryCallingCodeResult(40, "RO");
             case '1':
-                return new CountryCallingCodeResult(41, "CH");
+                return new CountryCallingCodeResult(41, "CH", false, 9);
             case '2':
                 return CountryCodeStarting42.Validate(localNumber.Substring(1));
             case '3':
                 return new CountryCallingCodeResult(43, "AT");
             case '4':
-                return new CountryCallingCodeResult(44, "UK", "GB", "GG", "IM", "JE");
+                return new CountryCallingCodeResult(44, ["UK", "GB", "GG", "IM", "JE"]);
             case '5':
                 return new CountryCallingCodeResult(45, "DK");
             case '6':
                 return new CountryCallingCodeResult(46, "SE");
             case '7':
-                return new CountryCallingCodeResult(47, "NO", "SJ", "BV");
+                return new CountryCallingCodeResult(47, ["NO", "SJ", "BV"]);
             case '8':
                 return new CountryCallingCodeResult(48, "PL");
             case '9':
-                return new CountryCallingCodeResult(49, "DE");
+                return new CountryCallingCodeResult(49, "DE", false, 5, 6, 7, 8, 9, 10, 11, 12, 13);
         }
 
         return new CountryCallingCodeResult();

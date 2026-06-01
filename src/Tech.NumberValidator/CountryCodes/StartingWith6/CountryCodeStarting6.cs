@@ -11,13 +11,13 @@ static class CountryCodeStarting6
             case '0':
                 return new CountryCallingCodeResult(60, "MY");
             case '1':
-                return new CountryCallingCodeResult(61, "AU", "CX", "CC");
+                return new CountryCallingCodeResult(61, ["AU", "CX", "CC"]);
             case '2':
                 return new CountryCallingCodeResult(62, "ID");
             case '3':
                 return new CountryCallingCodeResult(63, "PH");
             case '4':
-                return new CountryCallingCodeResult(64, "NZ", "PN");
+                return new CountryCallingCodeResult(64, ["NZ", "PN"]);
             case '5':
                 return new CountryCallingCodeResult(65, "SG");
             case '6':

@@ -7,6 +7,29 @@ namespace Tech.NumberValidator.Tests.GeneralValidation;
 public class CountryCallingCodeValidatorTests
 {
     [Theory]
+    [InlineData("3934611275762", 0)]
+    [InlineData("393355301076", 39)]
+    [InlineData("3939205941", 39)]
+    [InlineData("34699065443", 34)]
+    [InlineData("75943893412", 0)]
+    [InlineData("491775382067", 49)]
+    [InlineData("32475909900", 32)]
+    [InlineData("31628185180", 31)]
+    [InlineData("41786380923", 41)]
+    [InlineData("2977304557", 297)]
+    [InlineData("500997855694", 0)]
+    [InlineData("617329619", 61)]
+    [InlineData("33783608990", 33)]
+    public void TryingToFindCountryCode0(string testNumber, int expectedCountryCallingCode)
+    {
+        var number = new TelephoneNumber(testNumber);
+        var result = CountryCallingCodeValidator.Validate(number);
+
+        result.CountryCallingCode.Should().Be(expectedCountryCallingCode, $"{testNumber} is from country: {expectedCountryCallingCode}");
+    }
+
+
+    [Theory]
     [InlineData("0447897123654", 44)]
     [InlineData("447897123654", 44)]
     [InlineData("+447897123654", 44)]

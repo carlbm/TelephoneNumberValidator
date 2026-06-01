@@ -25,7 +25,7 @@ static class CountryCodeStarting35
             case '7':
                 return new CountryCallingCodeResult(357, "CY");
             case '8':
-                return new CountryCallingCodeResult(358, "FI", "AX");
+                return new CountryCallingCodeResult(358, ["FI", "AX"]);
             case '9':
                 return new CountryCallingCodeResult(359, "BG");
         }

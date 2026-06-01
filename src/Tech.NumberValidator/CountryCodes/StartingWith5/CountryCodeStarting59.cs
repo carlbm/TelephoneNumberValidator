@@ -9,7 +9,7 @@ static class CountryCodeStarting59
         switch (code.FirstOrDefault())
         {
             case '0':
-                return new CountryCallingCodeResult(590, "GP", "BL", "MF");
+                return new CountryCallingCodeResult(590, ["GP", "BL", "MF"]);
             case '1':
                 return new CountryCallingCodeResult(591, "BO");
             case '2':
@@ -27,7 +27,7 @@ static class CountryCodeStarting59
             case '8':
                 return new CountryCallingCodeResult(598, "UY");
             case '9':
-                return new CountryCallingCodeResult(599, "BQ", "CW");
+                return new CountryCallingCodeResult(599, ["BQ", "CW"]);
         }
         return new CountryCallingCodeResult();
     }

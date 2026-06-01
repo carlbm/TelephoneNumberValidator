@@ -11,7 +11,7 @@ static class CountryCodeStarting67
             case '0':
                 return new CountryCallingCodeResult(670, "TL");
             case '2':
-                return new CountryCallingCodeResult(672, "NF", "AQ", "HM");
+                return new CountryCallingCodeResult(672, ["NF", "AQ", "HM"]);
             case '3':
                 return new CountryCallingCodeResult(673, "BN");
             case '4':

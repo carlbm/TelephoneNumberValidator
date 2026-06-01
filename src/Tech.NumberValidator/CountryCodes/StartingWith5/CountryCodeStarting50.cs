@@ -9,7 +9,7 @@ static class CountryCodeStarting50
         switch (code.FirstOrDefault())
         {
             case '0':
-                return new CountryCallingCodeResult(500, "FK", "GS");
+                return new CountryCallingCodeResult(500, "FK", false, 5);
             case '1':
                 return new CountryCallingCodeResult(501, "BZ");
             case '2':

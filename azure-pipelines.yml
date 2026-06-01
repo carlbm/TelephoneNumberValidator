@@ -31,7 +31,6 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: Build solution
   inputs:
-    azureSubscription: 'Techcellence Website Hosting(3fed158c-1da3-4b48-942d-4b372de5efe3)'
     command: 'build'
     projects: '**/*.slnx'
     arguments: '-c $(buildConfiguration)'
